@@ -14,6 +14,8 @@ import CompanySetup from './components/admin/CompanySetup'
 import AdminJobs from './components/admin/AdminJobs'
 import PostJob from './components/admin/PostJob'
 import Applicants from './components/admin/Applicants'
+import FilteredCandidates from './components/admin/FilteredCandidates'
+import ResumeViewer from './components/ResumeViewer'
 import ProtectedRoute from './components/admin/protectedRoute'
 
 
@@ -77,6 +79,14 @@ const appRoute = createBrowserRouter([
   {
     path:'/admin/jobs/:id/applicants',
     element:<ProtectedRoute><Applicants/></ProtectedRoute>
+  },
+  {
+    path:'/admin/filtered-candidates',
+    element:<ProtectedRoute><FilteredCandidates/></ProtectedRoute>
+  },
+  {
+    path:'/resume/:userId',
+    element:<ResumeViewer/>
   }
    
 ])
